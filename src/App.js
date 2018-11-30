@@ -1,26 +1,34 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom';
+
+import Home from './components/Home';
+import BookDetail from './components/BookDetail';
+
+import books from './books.svg';
 import './App.css';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <Router>
+        <div className="App">
+          <div className="App-header">
+            <div className="Inner">
+              <Link to="/" className="Logo">
+                <img src={books} alt="Logo" />
+                <h2>On My Shelf</h2>
+              </Link>
+            </div>
+          </div>
+
+          <div className="Container Inner">
+            <Switch>
+              <Route exact path="/" component={Home} />
+              <Route path="/book/:bookId" component={BookDetail} />
+            </Switch>
+          </div>
+        </div>
+      </Router>
     );
   }
 }
