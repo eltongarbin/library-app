@@ -6,7 +6,9 @@ export default {
       purchase: 'Purchase this book from:',
       reviewsHeading: 'Reviews',
       averageRating: 'Average Rating: {avg}',
-      userRating: '{name} rated it: {rating} out of 5'
+      userRating: '{name} rated it: {rating} out of 5',
+      window:
+        '<small><em>All {numMerchants} links open in a new window.</em></small>'
     }
   },
   'es-ES': {
@@ -16,7 +18,9 @@ export default {
       purchase: 'Compre este libro de:',
       reviewsHeading: 'Comentarios',
       averageRating: 'Puntuación media: {avg}',
-      userRating: '{name} clasificado: {rating} de 5'
+      userRating: '{name} clasificado: {rating} de 5',
+      window:
+        '<small><em>Los {numMerchants} enlaces se abren en una nueva ventana.</em></small>'
     }
   },
   'fr-FR': {
@@ -26,7 +30,9 @@ export default {
       purchase: 'Achetez ce livre à partir de:',
       reviewsHeading: 'Avis',
       averageRating: 'Note movenne: {avg}',
-      userRating: "{name} L'a noté: {rating} sur 5"
+      userRating: "{name} L'a noté: {rating} sur 5",
+      window:
+        "<small><em>Les {numMerchants} liens s'ouvrent dans une nouvelle fenêtre.</em></small>"
     }
   }
 };
