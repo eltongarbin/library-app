@@ -109,7 +109,7 @@ const BookDetail = ({ match, intl }) => {
                 <br />
                 <FormattedRelative
                   value={new Date(review.date)}
-                  style="numeric"
+                  style="numeric" // eslint-disable-line
                 />
               </p>
             </div>
