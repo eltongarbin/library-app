@@ -109,7 +109,7 @@ const BookDetail = ({ match, intl }) => {
                 <br />
                 <FormattedRelative
                   value={new Date(review.date)}
-                  updateInterval={1000}
+                  style="numeric"
                 />
               </p>
             </div>
