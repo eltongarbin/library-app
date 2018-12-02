@@ -9,7 +9,8 @@ export default {
         'Average Rating: {avg} ({count, plural, =0 {No Reviews Yet!} one {# Review} other {# Reviews}})',
       userRating: '{name} rated it: {rating} out of 5',
       window:
-        '<small><em>All {numMerchants} links open in a new window.</em></small>'
+        '<small><em>All {numMerchants} links open in a new window.</em></small>',
+      inputPlaceholder: 'What did you think? Enter your review here.'
     }
   },
   'es-ES': {
@@ -22,7 +23,8 @@ export default {
         'Puntuación media: {avg} ({count, plural, =0 {No hay comentarios todavía!} one {# Crítica} other {# Críticas}})',
       userRating: '{name} clasificado: {rating} de 5',
       window:
-        '<small><em>Los {numMerchants} enlaces se abren en una nueva ventana.</em></small>'
+        '<small><em>Los {numMerchants} enlaces se abren en una nueva ventana.</em></small>',
+      inputPlaceholder: '¿Que piensas? Introduzca su comentario aquí.'
     }
   },
   'fr-FR': {
@@ -35,7 +37,8 @@ export default {
         'Note movenne: {avg} ({count, plural, =0 {Pas encore de commentaires!} one {# La revue} other {# Avis}})',
       userRating: "{name} L'a noté: {rating} sur 5",
       window:
-        "<small><em>Les {numMerchants} liens s'ouvrent dans une nouvelle fenêtre.</em></small>"
+        "<small><em>Les {numMerchants} liens s'ouvrent dans une nouvelle fenêtre.</em></small>",
+      inputPlaceholder: "Qu'as-tu pensé? Entrez votre avis ici."
     }
   }
 };
