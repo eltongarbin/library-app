@@ -10,17 +10,41 @@ import App from './App';
 import messages from './messages';
 import { flattenMessages } from './utils';
 
-addLocaleData([...en, ...es, ...fr]);
+if (!window.Intl) {
+  // eslint-disable-next-line
+  require.ensure(
+    [
+      'intl',
+      'intl/locale-data/jsonp/en.js',
+      'intl/locale-data/jsonp/es.js',
+      'intl/locale-data/jsonp/fr.js'
+    ],
+    (require) => {
+      require('intl');
+      require('intl/locale-data/jsonp/en.js');
+      require('intl/locale-data/jsonp/es.js');
+      require('intl/locale-data/jsonp/fr.js');
+    }
+  );
 
-const locale =
-  (navigator.languages && navigator.languages[0]) ||
-  navigator.language ||
-  navigator.userLanguage ||
-  'en-US';
+  runApp();
+} else {
+  runApp();
+}
 
-ReactDOM.render(
-  <IntlProvider locale={locale} messages={flattenMessages(messages[locale])}>
-    <App />
-  </IntlProvider>,
-  document.getElementById('root')
-);
+function runApp() {
+  addLocaleData([...en, ...es, ...fr]);
+
+  const locale =
+    (navigator.languages && navigator.languages[0]) ||
+    navigator.language ||
+    navigator.userLanguage ||
+    'en-US';
+
+  ReactDOM.render(
+    <IntlProvider locale={locale} messages={flattenMessages(messages[locale])}>
+      <App />
+    </IntlProvider>,
+    document.getElementById('root')
+  );
+}
